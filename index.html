@@ -2,11 +2,118 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Седона</title>
   </head>
   <body>
+    <header>
+      <nav>
+        <a>
+          <img src="img/index-logo.svg" width="140" height="72" alt="Логотип Седоны">
+        </a>
+        <ul>
+          <li>
+            <a>Информация</a>
+          </li>
+          <li>
+            <a href="gallery.html">Фото и видео</a>
+          </li>
+          <li>
+            <a href="map.html">Карта штата</a>
+          </li>
+          <li>
+            <a href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Добро пожаловать в Седону - город, где вы можете отдохнуть</h1>
+      <section>
+        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+        <!-- Считаю изображение с видами окрестностей Седоны контентным. Возможно, в будущем здесь будет слайдер с несколькими фото. Поэтому вставляю в разметку соответствующим тэгом. Приветственные надписи вставлю позже через CSS, будут svg или png -->
+
+        <img src="img/view_sedona.jpg" width="1200" height="800" alt="Виды окрестностей Седоны">
+      </section>
+
+      <section>
+        <h2>Оцените преимущества Седоны</h2>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <!-- размечу далее. Пункты про жилье, еду и сувениры тоже сделаю списком, вложенным в первый пункт -->
+        <ul>
+          <li>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Найдите свой отель для отдыха в Седоне</h2>
+        <span>Заинтересовались?</span>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <!-- Кнопку разметила тэгом button, т.к., согласно ТЗ, это простой переключатель, а не ссылка -->
+        <button type="button">Поиск госитиницы в Седоне</button>
+      </section>
+
+      <div>
+        <!-- позднее изображение заменю на iframe -->
+        <img src="map.jpg" width="1718" heihtj="748" alt="Седона на карте штата Аризона">
+      </div>
+    </main>
+    <footer>
+      <section>
+        <h2>Найдите нас по хэштэгу или позвоните</h2>
+        <span>#visitsedona</span>
+
+        <!-- Выбрала разметку для телефона именно такую для лучшей доступности, но можно было просто текст написать -->
+        <a href="tel:74956660266">Тел: +7(495) 666-02-66</a>
+      </section>
+      <section>
+        <h2>Мы в социальных сетях</h2>
+        <ul>
+          <li>
+            <a href="https://twitter.com/">Твиттер</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/">Фейсбук</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/">Ютуб</a>
+          </li>
+        </ul>
+      </section>
+      <div>
+        <span>website by</span>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/footer-logo.svg" width="115" height="41" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+    <section>
+      <h2>Забронируйте свой номер</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <label for="arrival_date">Дата заезда:</label>
+          <input type="date" id="arrival_date" name="arrival_date" value="2017-04-24">
+          <label for="departure_date">Дата выезда:</label>
+          <input type="date" id="departure_date" name="departure_date" value="2017-07-04">
+          <label for="adults">Взрослые:</label>
+          <input type="number" id="adults" name="adults" value="2" min="0">
+          <label for="children">Дети:</label>
+          <input type="number" id="children" name="children" value="0" min="0">
+          <button type="submit">Найти</button>
+        </fieldset>
+      </form>
+    </section>
 
   </body>
 </html>
