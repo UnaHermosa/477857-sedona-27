@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Поиск отеля</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="img/index-logo.svg" width="140" height="72" alt="Логотип Седоны">
+        </a>
+        <ul>
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="gallery.html">Фото и видео</a>
+          </li>
+          <li>
+            <a href="map.html">Карта штата</a>
+          </li>
+          <li>
+            <a>Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Найдите свой отель в Седоне</h1>
+      <section>
+        <h2>Фильтры для поиска отеля</h2>
+        <!-- Форму поиска добавлю позже -->
+        <!-- здесь изображение фоновое, добавлю в CSS -->
+      </section>
+
+      <section>
+        <h2>Найденные предложения для заселения</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <img src="img/amara_resort_hotel.jpg" width="135" height="112" alt="Amara Resort&spa  Hotel">
+            </a>
+            <a href="#">Amara resort&spa</a>
+            <span>гостиница</span>
+            <span>от 4000 р.</span>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <span>рейтинг: 8.5</span>
+            <!-- Звездочки-рейтинг - картинка не контекстная, вставлю в CSS. Но для улучшения доступности считаю, что нужно добавить элемент span с описанием "звездного рейтинга", т.к. это важная информация для выбора. Потом запрячу его visually hidden -->
+            <span>Международный рейтинг - 4 звезды</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/desert_quail_inn.jpg" width="135" height="112" alt="Desert Quail Inn Hotel">
+            </a>
+            <a href="#">Desert Quail Inn</a>
+            <span>мотель</span>
+            <span>от 3000 р.</span>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <span>рейтинг: 8.9</span>
+            <span>Международный рейтинг - 3 звезды</span>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/villas_at_poco_diablo.jpg" width="135" height="112" alt="Villas at Poco Diablo">
+            </a>
+            <a href="#">Villas at Poco Diablo</a>
+            <span>апартаменты</span>
+            <span>от 2000 р.</span>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+            <span>рейтинг: 9.2</span>
+            <span>Международный рейтинг - 2 звезды</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <h2>Найдите нас по хэштэгу или позвоните</h2>
+        <span>#visitsedona</span>
+
+        <!-- Выбрала разметку для телефона именно такую для лучшей доступности, но можно было просто текст написать -->
+        <a href="tel:74956660266">Тел: +7(495) 666-02-66</a>
+      </section>
+      <section>
+        <h2>Мы в социальных сетях</h2>
+        <ul>
+          <li>
+            <a href="https://twitter.com/">Твиттер</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/">Фейсбук</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/">Ютуб</a>
+          </li>
+        </ul>
+      </section>
+      <div>
+        <span>website by</span>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/footer-logo.svg" width="115" height="41" alt="HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+    <section>
+      <h2>Забронируйте свой номер</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <label for="arrival_date">Дата заезда:</label>
+          <input type="date" id="arrival_date" name="arrival_date" value="2017-04-24">
+          <label for="departure_date">Дата выезда:</label>
+          <input type="date" id="departure_date" name="departure_date" value="2017-07-04">
+          <label for="adults">Взрослые:</label>
+          <input type="number" id="adults" name="adults" value="2" min="0">
+          <label for="children">Дети:</label>
+          <input type="number" id="children" name="children" value="0" min="0">
+          <button type="submit">Найти</button>
+        </fieldset>
+      </form>
+    </section>
+
+  </body>
+</html>
