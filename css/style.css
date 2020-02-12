@@ -97,6 +97,42 @@ a {
   text-align: center;
 }
 
+.features-list,
+.features-sublist {
+  list-style: none;
+}
+
+.feature-item {
+  line-height: 21px;
+  color: #fff;
+  text-align: center;
+  background-color: #81b3d2;
+}
+
+.feature-item h3 {
+  color: #000;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.feature-item span,
+.feature-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+.sublist-item {
+  background-color: #fff;
+}
+
+.item-bridge {
+  background-color: #eee;
+}
+
+.map {
+  background-color: #cbdda9;
+}
+
 .appointment span {
   font-size: 30px;
   line-height: 36px;
@@ -109,7 +145,84 @@ a {
   text-align: center;
 }
 
-.search-list {
+.filters {
+  color: #fff;
+  background-color: #344550;
+  background-image: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter ul {
+  list-style: none;
+}
+
+.filter-option label {
+  line-height: 21px;
+}
+
+.filter-range {
+  color: #fff;
+}
+
+.price-controls label {
+  font-size: 14px;
+  line-height: 36px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls input {
+  color: inherit;
+  font: inherit;
+  background: none;
+}
+
+.range-controls .scale {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  background-color: #fff;
+}
+
+.range-toggle {
+  background-color: #ababab;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 1px rgba(0, 1, 1, 0.2);
+}
+
+.filter-button {
+  font: inherit;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.search-list,
+.sorting-list {
   list-style: none;
 }
 
@@ -117,6 +230,43 @@ a {
   font-size: 21px;
   font-weight: 700;
   color: #000;
+}
+
+.search-number {
+  color: #000;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.search-sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000;
+}
+
+.sorting-item {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dashed #81b3d2;
+}
+
+.sorting-item:hover {
+  color: #81b3d2;
+}
+
+.sorting-item:focus {
+  border: 1px dashed #81b3d2;
+}
+
+.sorting-item:active {
+  color: #000;
+  border-color: transparent;
+}
+
+.current-sorting-item {
+  color: #81b3d2;
+  border-color: transparent;
 }
 
 .button-more {

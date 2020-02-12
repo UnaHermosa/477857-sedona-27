@@ -69,23 +69,20 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
-              <legend>Стоимость в сутки (Р):</legend>
-              <div>
-                <!-- Это блок с управляющими полями ввода-->
-                <span>от 0</span>
-                <span>до 3000</span>
+            <div class="filter-range">
+              <div class="filter-range-title">Стоимость в сутки (р):</div>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
-              <!--Блок с ползунком, он оживляется js -->
-              <div>
-                <label for="min_price" aria-label="Минимальная стоимость проживания в сутки 0 рублей">
-                  <input id="min_price" type="range" name="minprice_choice" value="0" min="0" max="3000" step="500">
-                </label>
-                <label for="max_price" aria-label="Максимальная стоимость проживания в сутки 3000 рублей">
-                  <input id="max_price" type="range" name="maxprice__choice" value="2500" min="0" max="3000" step="500">
-                </label>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
               </div>
-            </fieldset>
+            </div>
             <button class="button filter-button" type="submit">Показать</button>
           </form>
         </section>
@@ -93,11 +90,11 @@
           <h2 class="visually-hidden">Найденные предложения для заселения</h2>
           <div class="search-wrapper">
             <span class="search-number">Найдено: 3</span>
-            <span class="serach-sorting">Сортировка:</span>
+            <span class="search-sorting">Сортировка:</span>
             <ul class="sorting-list">
-              <li class="sorting-item current-sorting-item"><a href="#">По цене</a></li>
-              <li class="sorting-item"><a href="#">По типу</a></li>
-              <li class="sorting-item"><a href="#">По рейтингу</a></li>
+              <li><a class="sorting-item current-sorting-item" href="#">По цене</a></li>
+              <li><a class="sorting-item" href="#">По типу</a></li>
+              <li><a class="sorting-item" href="#">По рейтингу</a></li>
             </ul>
             <div class="sorting-wrapper">
               <a class="visually-hidden" href="#">Сортировка по возрастанию</a>
