@@ -170,7 +170,7 @@ input[type="radio"].visually-hidden {
   height:59px;
   bottom: -2px;
   left: 0;
-  background-image: url(../img/polygon.svg);
+  background-image: url("../img/polygon.svg");
 }
 
 .index-image-wrapper img {
@@ -328,8 +328,6 @@ input[type="radio"].visually-hidden {
   width: 75px;
   height: 76px;
   top: 60px;
-  left: 50%;
-  margin-left: -37px;
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -344,7 +342,7 @@ input[type="radio"].visually-hidden {
 
 .sublist-item:nth-child(3)::before {
   top: 55px;
-  margin-left: -32px;
+  margin-left: 6px;
   background-image: url("../img/icon-gift.svg");
 }
 
@@ -968,6 +966,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   margin-top: 44px;
   margin-bottom: 34px;
+  padding-left: 133px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -975,14 +974,24 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-contacts span {
-  margin-left: 133px;
   vertical-align: top;
 }
 
 .footer-contacts a {
   display: block;
-  padding-left: 133px;
   color: #000;
+}
+
+.footer-contacts a:hover {
+  color: #81b3d2;
+}
+
+.footer-contacts a:focus {
+  outline: 2px solid #81b3d2;
+}
+
+.footer-contacts a:active {
+  color: #bdbbbc;
 }
 
 .footer-socials ul {
