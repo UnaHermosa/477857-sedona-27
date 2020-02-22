@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -49,15 +49,15 @@
                 <img src="img/sedona_view.jpg" width="800" height="256" alt="Виды Седоны">
               </div>
               <ul class="features-sublist">
-                <li class="sublist-item item-feature">
+                <li class="sublist-item item-preferences">
                   <h3>Жилье</h3>
                   <p>Рекомендуем пожить в настоящем <br> мотеле, всё как в кино!</p>
                 </li>
-                <li class="sublist-item item-feature">
+                <li class="sublist-item item-preferences">
                   <h3>Еда</h3>
                   <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
                 </li>
-                <li class="sublist-item item-feature">
+                <li class="sublist-item item-preferences">
                   <h3>Сувениры</h3>
                   <p>Не только китайского, но и местного<br> производства!</p>
                 </li>
@@ -104,8 +104,9 @@
             <h2 class="visually-hidden">Забронируйте свой номер</h2>
             <form class="book-form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset>
-                <label class="arrival-input">Дата заезда:
-                  <input type="text" name="arrival_date" value="24 апреля 2107">
+                <div class="arrival-input">
+                  <label for="arrival-field">Дата заезда:</label>
+                  <input type="text" id="arrival-field" name="arrival_date" value="24 апреля 2107">
                   <a class="input-calendar" href="#">
                     <svg width="21" height="22">
                       <g fill="#cacaca">
@@ -128,9 +129,10 @@
                       </g>
                     </svg>
                   </a>
-                </label>
-                <label class="departure-input">Дата выезда:
-                  <input type="text" name="departure_date" value="4 июля 2017">
+                </div>
+                <div class="departure-input">
+                  <label for="departure-field">Дата выезда:</label>
+                  <input type="text" id="departure-field" name="departure_date" value="4 июля 2017">
                   <a class="input-calendar" href="#">
                     <svg width="21" height="22">
                       <g fill="#cacaca">
@@ -153,7 +155,7 @@
                       </g>
                     </svg>
                   </a>
-                </label>
+                </div>
                 <div class="visitors-wrapper">
                   <label for="adults">Взрослые:</label>
                   <button class="button-minus" type="button" name="minus-adult">
