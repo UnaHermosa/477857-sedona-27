@@ -1217,19 +1217,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@keyframes closeform {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-400px);
-  }
-}
-
 .modal {
-  display: none;
-  flex: 1;
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1243,6 +1231,8 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-100%);
+  transition: transform 0.4s easy;
 }
 
 .modal.no-js {
@@ -1250,19 +1240,12 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-show {
-  display: block;
-  animation: showform 0.4s;
+  transform: translateY(0);
+  transition: transform 0.4s easy;
 }
 
 .modal-error {
   animation: shake 0.6s;
-}
-
-.modal-close {
-  display: block;
-  -webkit-animation: closeform 0.4s;
-  -o-animation: closeform 0.4s;
-  animation: closeform 0.4s;
 }
 
 .book-form {

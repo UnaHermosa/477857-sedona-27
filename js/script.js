@@ -11,7 +11,7 @@ button.addEventListener("click", function(evt){
   if(searchForm.classList.contains("modal-show")) {
     searchForm.classList.remove("modal-show");
     searchForm.classList.remove("modal-error");
-    searchForm.classList.add("modal-close");
+
   } else {
     searchForm.classList.add("modal-show");
     };
@@ -32,7 +32,6 @@ if(searchForm.classList.contains("no-js")) {
 window.addEventListener("keydown", function(evt){
   if(evt.keyCode===27){
     if(searchForm.classList.contains("modal-show")){
-
       searchForm.classList.remove("modal-show");
       searchForm.classList.remove("modal-error");
     }
