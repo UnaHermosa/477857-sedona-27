@@ -1185,16 +1185,6 @@ input[type="radio"].visually-hidden {
   fill: #bdbbbc;
 }
 
-@keyframes showform {
-  0% {
-    transform: translateY(-400px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes shake {
   0%,
   100% {
@@ -1232,7 +1222,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-100%);
-  transition: transform 0.4s easy;
+  transition: transform 0.4s ease;
 }
 
 .modal.no-js {
@@ -1241,7 +1231,7 @@ input[type="radio"].visually-hidden {
 
 .modal-show {
   transform: translateY(0);
-  transition: transform 0.4s easy;
+  transition: transform 0.4s ease;
 }
 
 .modal-error {
