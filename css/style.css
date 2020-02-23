@@ -196,6 +196,7 @@ input[type="radio"].visually-hidden {
 }
 
 .features {
+  position: relative;
   width: 1200px;
   padding-top: 1px;
 }
@@ -439,11 +440,18 @@ input[type="radio"].visually-hidden {
   background-color: #cbdda9;
 }
 
-.appointment-wrapper {
+.map iframe {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  z-index: 2;
+  border: none;
+}
+
+.map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
 }
 
 .appointment {
@@ -1177,15 +1185,57 @@ input[type="radio"].visually-hidden {
   fill: #bdbbbc;
 }
 
+@keyframes showform {
+  0% {
+    transform: translateY(-400px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes closeform {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-400px);
+  }
+}
+
 .modal {
-  display: block;
+  display: none;
   flex: 1;
   position: absolute;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 569px;
-  z-index: 1;
-  top: 293px;
+  z-index: 3;
+  top: 0;
   left: 50%;
   margin-left: -285px;
   color: #000;
@@ -1193,6 +1243,26 @@ input[type="radio"].visually-hidden {
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal.no-js {
+  display: block;
+}
+
+.modal-show {
+  display: block;
+  animation: showform 0.4s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-close {
+  display: block;
+  -webkit-animation: closeform 0.4s;
+  -o-animation: closeform 0.4s;
+  animation: closeform 0.4s;
 }
 
 .book-form {
@@ -1223,6 +1293,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   align-items: baseline;
+  margin-right: 3px;
 }
 
 .book-form label {
@@ -1235,7 +1306,7 @@ input[type="radio"].visually-hidden {
 
 .arrival-input input,
 .departure-input input {
-  width: 345px;
+  width: 342px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-left: 20px;
@@ -1244,6 +1315,7 @@ input[type="radio"].visually-hidden {
   padding-top: 12px;
   padding-bottom: 10px;
   padding-left: 10px;
+  padding-right: 35px;
   color: #000;
   background-color: #f2f2f2;
   border: none;
@@ -1254,6 +1326,16 @@ input[type="radio"].visually-hidden {
 
 .departure-input input {
   margin-left: 20px;
+}
+
+.arrival-input input:hover,
+.departure-input input:hover {
+  background-color: #ebebeb;
+}
+
+.arrival-input input:focus,
+.departure-input input:focus {
+  outline: 2px solid #81b3d2;
 }
 
 .input-calendar {
