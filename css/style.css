@@ -150,7 +150,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-nav-item a:focus {
-  color: #766357;
+  outline: 2px solid #a4c7db;
 }
 
 .site-nav-item a:active {
@@ -589,6 +589,10 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.filter-input:focus + label::before {
+  outline: 2px solid #766357;
 }
 
 .filter-input:disabled + label::before {
