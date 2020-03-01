@@ -930,11 +930,12 @@ input[type="radio"].visually-hidden {
 
 .search-text-wrapper {
   font-size: 0;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 
 .search-text-wrapper span {
   display: inline-block;
+  vertical-align: middle;
   width: 110px;
   margin-right: 6px;
   font-size: 14px;
